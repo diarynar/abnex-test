@@ -6,8 +6,11 @@ import { AuthModule } from '../users/auth.module';
 import { CarsController } from './controller/car.controller';
 
 @Module({
-	imports: [MongooseModule.forFeature([{ name: 'Car', schema: CarSchema }]),c AuthModule],
-	providers: [CarsService, ],
-	controllers: [CarsController]
+  imports: [
+    MongooseModule.forFeature([{ name: 'Car', schema: CarSchema }]),
+    AuthModule,
+  ],
+  providers: [CarsService],
+  controllers: [CarsController],
 })
-export class CarsModule { }
+export class CarsModule {}
